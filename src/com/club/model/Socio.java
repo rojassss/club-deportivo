@@ -57,7 +57,7 @@ public class Socio {
 
     @Override
     public String toString () {
-        return "{Datos del socio" +
+        return "{Datos del socio:\n" +
                 "id: " + id +
                 ", nombre: " + nombre +
                 ", apellido: " + apellido +

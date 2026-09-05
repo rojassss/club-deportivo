@@ -7,13 +7,20 @@ import java.util.List;
 
 public class SocioService {
     private List<Socio> socios;
+    private int contadorId;
 
     public SocioService () {
         socios = new ArrayList<>();
+        this.contadorId = 1;
     }
 
-    public void registrarSocio(Socio socio) {
+    public boolean registrarSocio(Socio socio) {
+        if (buscarPorDni(socio.getDni()) != null) {
+            return false; // Retorna false si ya existe
+        }
+        socio.setId(contadorId++);
         socios.add(socio);
+        return true; // Retorna true si se registró bien
     }
 
     public List<Socio>  listarSocio() {
