@@ -1,3 +1,5 @@
+package com.club;
+
 import com.club.model.Socio;
 import com.club.service.SocioService;
 
